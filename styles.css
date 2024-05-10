@@ -1,0 +1,75 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333; /* Dark header background */
+}
+
+.logo {
+    height: 50px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff; /* White text for nav links */
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #9ed6a0; /* Green text on hover */
+}
+
+.content {
+    flex: 1;
+    padding: 2rem;
+    background: linear-gradient(to right, #a2af4c, #71a083); /* Green gradient background */
+    color: #fff; /* White text for content */
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.explore-btn {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
