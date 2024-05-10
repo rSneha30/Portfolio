@@ -1,0 +1,27 @@
+/* Global Styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Flexbox Centering */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:lightcyan; /* Light background for the whole page */
+  }
+  
+  /* Contact Section Styles */
+  #contact {
+    background-color: #8eac62,rgb(191, 191, 243);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px; /* Maximum width of the contact section */
+  }
+  
+  /* Rest of the styles remain the same */
+  
