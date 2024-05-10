@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneha's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="OIP (5).jpeg" alt="Sneha's Logo" class="logo">
+            <nav class="navbar">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="about.html" class="nav-link">ABOUT</a>
+                <a href="education.html" class="nav-link">EDUCATION</a>
+                <a href="project.html" class="nav-link">PROJECTS</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </nav>
+        </header>
+        <main class="content">
+            <h1>Sneha - One Name, One Legend</h1>
+            <button class="btn explore-btn">EXPLORE</button>
+        </main>
+    </div>
+
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        // Typing effect for the main heading
+        const heading = document.querySelector('.content h1');
+        const headingText = heading.innerText;
+        let index = 0;
+    
+        function typeEffect() {
+            if (index < headingText.length) {
+                heading.innerText += headingText.charAt(index);
+                index++;
+                setTimeout(typeEffect, 150);
+            }
+        }
+    
+        heading.innerText = '';
+        typeEffect();
+    
+        // Dynamic background color change
+        const body = document.body;
+        let colorChange = 0;
+    
+        function changeBackground() {
+            body.style.backgroundColor = `hsl(${colorChange}, 75%, 60%)`;
+            colorChange++;
+            if (colorChange > 360) {
+                colorChange = 0;
+            }
+            requestAnimationFrame(changeBackground);
+        }
+    
+        changeBackground();
+    
+        // Interactive explore button
+        const exploreBtn = document.querySelector('.explore-btn');
+        exploreBtn.addEventListener('click', () => {
+            // Assuming there's a section with the class 'more-content' to scroll to
+            const moreContent = document.querySelector('.more-content');
+            moreContent.style.display = 'block';
+            moreContent.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    
+</script>
+</html>
